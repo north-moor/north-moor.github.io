@@ -8,136 +8,71 @@
   <style>
     :root{
       --bg:#ffffff;
-      --text:#121212;
-      --muted:#4b5563;
+      --text:#111111;
+      --muted:#6b7280;
       --line:#e5e7eb;
-      --link:#0f172a;
-      --card:#fafafa;
+      --button:#111111;
+      --button-text:#ffffff;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       background:var(--bg);
       color:var(--text);
-      font-family: "IBM Plex Sans","Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      line-height:1.5;
+      font-family:"IBM Plex Sans","Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.4;
     }
-    a{color:var(--link); text-decoration:underline; text-underline-offset:3px}
-    .wrap{max-width:860px; margin:0 auto; padding:48px 20px 64px}
-    header{display:flex; justify-content:space-between; gap:24px; align-items:flex-start; border-bottom:1px solid var(--line); padding-bottom:22px; margin-bottom:26px}
-    .brand{display:flex; flex-direction:column; gap:8px}
-    .brand h1{margin:0; font-size:22px; letter-spacing:0.2px}
-    .brand p{margin:0; color:var(--muted); max-width:56ch}
-    .pill{
-      display:inline-block;
-      padding:6px 10px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      font-size:12px;
-      color:var(--muted);
-      white-space:nowrap;
-    }
-    main{display:grid; grid-template-columns: 1fr; gap:18px}
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:18px 16px;
-    }
-    .card h2{margin:0 0 10px; font-size:14px; letter-spacing:0.4px; text-transform:uppercase; color:#111827}
-    ul{margin:0; padding-left:18px}
-    li{margin:8px 0; color:var(--text)}
-    .muted{color:var(--muted)}
-    .contact{
+    .wrap{
+      min-height:100vh;
       display:flex;
-      flex-wrap:wrap;
-      gap:10px 16px;
+      flex-direction:column;
+      justify-content:center;
       align-items:center;
-      justify-content:space-between;
+      padding:40px 20px;
+      text-align:center;
     }
-    .contact a{font-weight:600}
-    footer{
-      margin-top:28px;
-      padding-top:18px;
-      border-top:1px solid var(--line);
+    h1{
+      margin:0 0 10px;
+      font-size:26px;
+      font-weight:500;
+      letter-spacing:0.3px;
+    }
+    p{
+      margin:0 0 28px;
       color:var(--muted);
-      font-size:12px;
+      font-size:15px;
     }
-    .cols{display:grid; gap:14px}
-    @media (min-width: 820px){
-      main{grid-template-columns: 1.1fr 0.9fr}
-      .cols{grid-template-columns: 1fr 1fr}
-      header{align-items:center}
+    a.button{
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:999px;
+      background:var(--button);
+      color:var(--button-text);
+      text-decoration:none;
+      font-size:14px;
+      font-weight:500;
+    }
+    a.button:hover{
+      opacity:0.85;
+    }
+    footer{
+      position:absolute;
+      bottom:18px;
+      font-size:12px;
+      color:var(--muted);
     }
   </style>
 </head>
 
 <body>
   <div class="wrap">
-    <header>
-      <div class="brand">
-        <h1>Northmoor Advisory Ltd</h1>
-        <p>Independent research and factual analysis. Clear separation of observation and interpretation, documented neutrally.</p>
-      </div>
-      <span class="pill">UK · Discreet · Low-profile</span>
-    </header>
-
-    <main>
-      <section class="card">
-        <h2>Scope</h2>
-        <p class="muted" style="margin:0 0 12px;">
-          Northmoor provides independent research support for professional decision-making.
-        </p>
-        <div class="cols">
-          <div>
-            <p style="margin:0 0 8px; font-weight:600;">Open-source research</p>
-            <ul>
-              <li>Public records and open web sources</li>
-              <li>Structured source logging and citation</li>
-              <li>Chronologies, relationship mapping, and risk context</li>
-            </ul>
-          </div>
-          <div>
-            <p style="margin:0 0 8px; font-weight:600;">Public-setting observation</p>
-            <ul>
-              <li>Proportionate, lawful, non-intrusive observation in public places</li>
-              <li>Contemporaneous notes and time/location logging</li>
-              <li>Findings presented as facts, with clear confidence levels</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <aside class="card">
-        <h2>Working approach</h2>
-        <ul>
-          <li>Written scope and outcome expectations agreed in advance</li>
-          <li>Data minimisation and privacy-respecting practice</li>
-          <li>Neutral language; no advocacy or agency</li>
-          <li>Deliverables formatted for auditability (PDF)</li>
-        </ul>
-
-        <div style="height:14px;"></div>
-
-        <div class="contact">
-          <div>
-            <div class="muted" style="font-size:12px; margin-bottom:4px;">Contact</div>
-            <a href="mailto:scott@northmooradvisory.co.uk">scott@northmooradvisory.co.uk</a>
-          </div>
-          <div class="muted" style="font-size:12px; text-align:right;">
-            Response times vary
-          </div>
-        </div>
-      </aside>
-    </main>
-
-    <footer>
-      <div><strong>Scott Gildea</strong> · Independent Researcher</div>
-      <div>Northmoor Advisory Ltd · Company registered in England &amp; Wales</div>
-      <div class="muted" style="margin-top:8px;">
-        This website is informational only and does not constitute legal advice.
-      </div>
-    </footer>
+    <h1>Northmoor Advisory Ltd</h1>
+    <p>Independent Research</p>
+    <a class="button" href="mailto:scott@northmooradvisory.co.uk">Contact</a>
   </div>
+
+  <footer>
+    © Northmoor Advisory Ltd
+  </footer>
 </body>
 </html>
